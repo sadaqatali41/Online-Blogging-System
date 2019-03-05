@@ -2,7 +2,15 @@
 
 	class Welcomecontroller extends CI_Controller
 	{
-		
+		public function __construct()
+		{
+			parent::__construct();
+			$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate");
+			$this->output->set_header("Expires: Sat, 26 Jul 1997 05:00:00 GMT");
+			$this->output->set_header("Pragma: no-cache");
+			if(!$this->session->userdata('user_id'))
+				return redirect('logincontroller');
+		}	
 		public function welcome()
 		{
 			$this->load->model('fetcharticlemodel');
@@ -35,7 +43,7 @@
 		public function receiveaddarticles()
 		{
 			$config = array(
-						'upload_path'	=>'./uploads',
+						'upload_path'	=>'./uploads/',
 						'allowed_types'	=>'gif|jpg|png|jpeg'
 
 			);
@@ -125,15 +133,7 @@
 			}
 			return redirect('welcomecontroller/welcome');
 		}
-		public function __construct()
-		{
-			parent::__construct();
-			$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate");
-			$this->output->set_header("Expires: Sat, 26 Jul 1997 05:00:00 GMT");
-			$this->output->set_header("Pragma: no-cache");
-			if(!$this->session->userdata('user_id'))
-				return redirect('logincontroller');
-		}
+		
 	}
 
 ?>
