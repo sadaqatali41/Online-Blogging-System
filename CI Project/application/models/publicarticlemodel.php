@@ -6,16 +6,16 @@
 		{
 			$this->load->database();
 			$q = $this->db->select('title,body,id')
-							->limit($limit,$offset)
-							->get('articles');
-							return $q->result();
+					->limit($limit,$offset)
+					->get('articles');
+					return $q->result();
 		}
 		public function fetch_rows()
 		{
 			$this->load->database();
 			$q = $this->db->select('title,body,id')
-							->get('articles');
-							return $q->num_rows();
+					->get('articles');
+					return $q->num_rows();
 		}
 		
 	}
