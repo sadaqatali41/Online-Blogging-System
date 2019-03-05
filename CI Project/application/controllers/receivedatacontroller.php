@@ -25,8 +25,10 @@
 				}
 			}
 			else
-			{
+			{	$this->load->helper('form');
+			 	$this->load->view('hheader');
 				$this->load->view('login_view');
+			 	$this->load->view('ffooter');
 			}
 		}
 	}
