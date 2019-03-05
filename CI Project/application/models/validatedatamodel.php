@@ -7,7 +7,7 @@
 		{
 			$this->load->database();
 			$q = $this->db->where(array('uname'=>$uname,'pwd'=>$pwd))
-							->get('login');
+					->get('login');
 			if($q->num_rows())
 			{
 				return $q->row()->id;
