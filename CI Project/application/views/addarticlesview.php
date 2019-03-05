@@ -15,7 +15,7 @@
 			</div>
 			<div class="row">
 				<div class="col-sm-12 text-center">
-							<strong><?php echo form_error('title'); ?></strong>
+					<strong><?php echo form_error('title'); ?></strong>
 				</div>
 			</div>
 			<br>
@@ -36,7 +36,7 @@
 			</div>
 			<div class="row">
 				<div class="col-sm-12 text-center">
-							<strong><?php if(isset($upload_error)){echo $upload_error;} ?></strong>
+					<strong><?php if(isset($upload_error)){echo $upload_error;} ?></strong>
 				</div>
 			</div>
 			<br>
