@@ -20,8 +20,8 @@
 			$this->load->model('publicarticlemodel');
 			$this->load->library('pagination');
 			$config = array(
-						'base_url'			=>base_url('logincontroller/publicarticle'),
-						'per_page'			=>5,
+						'base_url'		=>base_url('logincontroller/publicarticle'),
+						'per_page'		=>5,
 						'total_rows'		=>$this->publicarticlemodel->fetch_rows(),
 						'full_tag_open'		=>"<ul class='pagination'>",
 						'full_tag_close'	=>'</ul>',
