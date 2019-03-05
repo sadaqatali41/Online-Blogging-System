@@ -36,7 +36,7 @@
 
  			$q = $this->db->where(array('article_id'=>$article_id,'id'=>$this->session->userdata('user_id')))
  							->update('articles',$data);
- 							return $q;
+ 							 return $q;
  		}
  		public function deletearticles($article_id)
  		{
