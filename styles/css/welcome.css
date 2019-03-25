@@ -1,0 +1,16 @@
+div.welcome
+{
+	margin: auto;
+	padding: 1%;
+	box-shadow: 4px 5px 20px 6px gray;
+}
+.table
+{
+	text-align: center;
+}
+div.addarticles
+{
+	width: 50%;
+	margin: auto;
+	box-shadow: 4px 5px 20px 6px gray;
+}
